@@ -69,11 +69,11 @@ Rails.application.configure do
   host = 'pacific-scrubland-16239.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address => 'smtp.sendgrid.net',
-    :port => '587',
+    :address => ENV['MAILGUN_SMTP_SERVER'],
+    :port => ENV['MAILGUN_STMP_PORT'],
     :authentication => :plain,
-    :user_name => ENV['SENDGIRD_USERNAME'],
-    :password => ENV['SENDGIRD_PASSWORD'],
+    :user_name => ENV['MAILGUN_SMTP_LOGIN'],
+    :password => ENV['MAILGUN_SMTP_PASSWORD'],
     :domain => 'heroku.com',
     :enable_starttls_auto => true
   }
