@@ -1,0 +1,15 @@
+one:
+  follower: shreya
+  followed: lana
+
+two:
+  follower: shreya
+  followed: malory
+
+three:
+  follower: lana
+  followed: Shreya
+
+four:
+  follower: archer
+  followed: shreya
